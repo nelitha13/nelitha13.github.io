@@ -45,7 +45,7 @@ background: linear-gradient(90deg,#2ca2b461,#5598de70 24%,#7f87ff66 45%,#f65aad5
   );
   --bg-gradient-yellow-2: linear-gradient(
     135deg, 
-    hsla(45, 100%, 71%, 0.251) 0%, 
+    hsla(234, 100%, 71%, 0.251) 0%, 
     hsla(35, 100%, 68%, 0) 59.86%
   ), hsl(240, 2%, 13%);
   --border-gradient-onyx: linear-gradient(
