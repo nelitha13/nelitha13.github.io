@@ -72,7 +72,7 @@ background: linear-gradient(90deg,#2ca2b461,#5598de70 24%,#7f87ff66 45%,#f65aad5
   --vegas-gold: hsl(236, 54%, 58%);
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
-  --bittersweet-shimmer: hsl(0, 43%, 51%);
+  --bittersweet-shimmer: hsl(239, 43%, 51%);
 
   /**
    * typography
