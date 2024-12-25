@@ -125,18 +125,18 @@
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" >
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" media="print"
     onload="this.media='all'">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet" >
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" >
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" >
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet" >
+  <link href="assets/css/main.css" rel="stylesheet">
 
   <!-- Fallback -->
   <noscript>
@@ -181,7 +181,6 @@
   </header>
 
   <main class="main">
-
     <style>
       @font-face {
         font-family: 'Rtddyans';
@@ -190,19 +189,128 @@
 
       .custom-font {
         font-family: 'Rtddyans', sans-serif;
+        font-size: larger;
+      }
+
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      /* Hero Section Styles */
+      .hero {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100vh;
+        background: url('assets/img/hero-cover.webp') no-repeat center center/cover;
+        color: white;
+        overflow: hidden;
+      }
+
+
+
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.822);
+        /* Overlay effect */
+        z-index: 1;
+      }
+
+      .hero .container {
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero h2 {
+        font-size: 5rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      .social-links a {
+        color: white;
+        font-size: 1.5rem;
+        transition: transform 0.3s ease, color 0.3s ease;
+      }
+
+      .social-links a:hover {
+        transform: scale(1.2);
+        color: #00aaff;
+      }
+
+      .scroll-down .arrow {
+        font-size: 1.5rem;
+        color: #fff;
+      }
+
+      .animate-bounce {
+        animation: bounce 1.5s infinite;
+      }
+
+      .animate-bounce.delay-200 {
+        animation-delay: 0.2s;
+      }
+
+      .animate-bounce.delay-400 {
+        animation-delay: 0.4s;
+      }
+
+      @keyframes bounce {
+
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(10px);
+        }
+      }
+
+      #home h2,
+      .scroll-down {
+        z-index: 2;
+        position: relative;
+        bottom: 2rem;
+        /* Adjust to your preferred value */
+
       }
     </style>
-    <!-- home Section -->
-    <section id="home" class="hero section dark-background">
 
-      <img src="assets/img/hero.jpg" alt="" data-aos="fade-in">
+    <!-- Home Section -->
+    <section id="home" class="hero section dark-background position-relative">
+      <div class="container text-center" data-aos="zoom-out" data-aos-delay="100">
+        <h2 class="custom-font">Nelitha Vindinu Priyawansha</h2>
+        <p class="custom-font">
+          <span class="typed" data-typed-items="Cinematographer, Developer, Musical Artist, Journalist"></span>
+          <span class="typed-cursor typed-cursor--blink"></span>
+        </p>
 
-      <div class="container" data-aos="zoom-out" data-aos-delay="100">
-        <h2>Nelitha Priyawansha</h2>
-        <p><span class="typed" data-typed-items="Cinematographer, Developer, Musical Artist, Journalist"></span><span
-            class="typed-cursor typed-cursor--blink"></span></p>
-
-        <div class="social-links">
+        <div class="social-links d-flex justify-content-center gap-3 mt-3">
           <a href="https://www.facebook.com/nelitha.13" target="_blank" aria-label="Visit my Facebook profile">
             <i class="bi bi-facebook"></i>
           </a>
@@ -215,862 +323,816 @@
           <a href="https://www.linkedin.com/in/nelitha13/" target="_blank" aria-label="Visit my LinkedIn profile">
             <i class="bi bi-linkedin"></i>
           </a>
-
         </div>
       </div>
 
-    </section><!-- /home Section -->
-
-  </main>
-
-
-  <!-- About Section -->
-  <section id="about" class="about section">
-
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-      <div class="row gy-4 justify-content-center">
-        <div class="col-lg-4">
-          <img src="assets/img/profile-img.webp" class="img-fluid" alt="">
-        </div>
-        <div class="col-lg-8 content">
-          <h2>Web Developer, Cinematographer, Musical Artist &amp; Journalist.</h2>
-          <p class="fst-italic py-3">
-            Nelitha Priyawansha is a talented web developer, content creator, and aspiring AI enthusiast from Sri Lanka,
-            known for his impactful projects and contributions to the digital world.
-          </p>
-          <div class="row">
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>13 May 2006</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+94775536129</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Panadura, Sri Lanka</span></li>
-              </ul>
-            </div>
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Student</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>nelithaonline2006@gmail.com</span>
-                </li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-              </ul>
-            </div>
-          </div>
-          <p class="py-3">
-            Nelitha Priyawansha is a passionate web developer and content creator, known for his work on various
-            impactful projects. He developed the award-winning website for Prince of Wales College Moratuwa, which
-            earned a Silver Award at BestWeb.LK 2024. As an editor for AndroidWedakarayo.com, he collaborates with
-            professionals to deliver quality content. Additionally, Nelitha has worked on several creative projects,
-            including cinematographic vlogs and event aftermovies, showcasing his diverse skills and contributions to
-            both the tech and creative fields.
-          </p>
-        </div>
+      <div class="scroll-down text-center position-absolute bottom-1 start-50 translate-middle-x">
+        <div class="arrow animate-bounce"><i class="bi bi-chevron-down"></i></div>
+        <div class="arrow animate-bounce delay-200"><i class="bi bi-chevron-down"></i></div>
+        <div class="arrow animate-bounce delay-400"><i class="bi bi-chevron-down"></i></div>
       </div>
 
-    </div>
+    </section>
 
-  </section><!-- /About Section -->
 
-  <!-- Stats Section -->
-  <section id="about" class="stats section">
 
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-      <div class="row gy-4">
 
-        <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-          <i class="bi bi-emoji-smile"></i>
-          <div class="stats-item">
-            <span data-purecounter-start="0" data-purecounter-end="80" data-purecounter-duration="1"
-              data-purecounter-suffix="+" class="purecounter"></span>
-            <p>Happy Clients</p>
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/profile-img.webp" class="img-fluid" alt="">
           </div>
-        </div><!-- End Stats Item -->
-
-        <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-          <i class="bi bi-journal-richtext"></i>
-          <div class="stats-item">
-            <span data-purecounter-start="0" data-purecounter-end="104" data-purecounter-duration="1"
-              data-purecounter-suffix="+" class="purecounter"></span>
-            <p>Projects</p>
-          </div>
-        </div><!-- End Stats Item -->
-
-        <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-          <i class="bi bi-headset"></i>
-          <div class="stats-item">
-            <span data-purecounter-start="0" data-purecounter-end="953" data-purecounter-duration="1"
-              data-purecounter-suffix="+" class="purecounter"></span>
-            <p>Hours Of Support</p>
-          </div>
-        </div><!-- End Stats Item -->
-
-        <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-          <i class="bi bi-people"></i>
-          <div class="stats-item">
-            <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1"
-              data-purecounter-suffix="+" class="purecounter"></span>
-            <p>Hard Workers</p>
-          </div>
-        </div><!-- End Stats Item -->
-
-
-      </div>
-
-    </div>
-
-  </section><!-- /Stats Section -->
-
-  <!-- Skills Section -->
-  <section id="about" class="skills section">
-
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Skills</h2>
-      <div><span>My</span> <span class="description-title">Skills</span></div>
-    </div><!-- End Section Title -->
-
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-      <div class="row skills-content skills-animation">
-
-        <div class="col-lg-6">
-          <div class="progress">
-            <span class="skill" id="html-skill"><span>HTML</span> <i class="val">100%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
-                aria-labelledby="html-skill">
-              </div>
-            </div>
-          </div><!-- End Skills Item -->
-
-          <div class="progress">
-            <span class="skill" id="css-skill"><span>CSS</span> <i class="val">90%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
-                aria-labelledby="css-skill">
-              </div>
-            </div>
-          </div><!-- End Skills Item -->
-
-          <div class="progress">
-            <span class="skill" id="javascript-skill"><span>JavaScript</span> <i class="val">75%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-                aria-labelledby="javascript-skill">
-              </div>
-            </div>
-          </div><!-- End Skills Item -->
-
-          <div class="progress">
-            <span class="skill" id="php-skill"><span>PHP</span> <i class="val">80%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                aria-labelledby="php-skill">
-              </div>
-            </div>
-          </div><!-- End Skills Item -->
-
-          <div class="progress">
-            <span class="skill" id="python-skill"><span>Python</span> <i class="val">75%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-                aria-labelledby="python-skill">
-              </div>
-            </div>
-          </div><!-- End Skills Item -->
-        </div>
-
-        <div class="col-lg-6">
-          <div class="progress">
-            <span class="skill" id="laravel-skill"><span>Laravel/Web Framework</span> <i class="val">50%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                aria-labelledby="laravel-skill">
-              </div>
-            </div>
-          </div><!-- End Skills Item -->
-
-          <div class="progress">
-            <span class="skill" id="wordpress-skill"><span>WordPress/CMS</span> <i class="val">90%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
-                aria-labelledby="wordpress-skill">
-              </div>
-            </div>
-          </div><!-- End Skills Item -->
-
-          <div class="progress">
-            <span class="skill" id="ghost-skill"><span>Ghost/CMS</span> <i class="val">80%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                aria-labelledby="ghost-skill">
-              </div>
-            </div>
-          </div><!-- End Skills Item -->
-
-          <div class="progress">
-            <span class="skill" id="premiere-skill"><span>Premier Pro</span> <i class="val">65%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
-                aria-labelledby="premiere-skill">
-              </div>
-            </div>
-          </div><!-- End Skills Item -->
-
-          <div class="progress">
-            <span class="skill" id="photoshop-skill"><span>Photoshop</span> <i class="val">55%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"
-                aria-labelledby="photoshop-skill">
-              </div>
-            </div>
-          </div><!-- End Skills Item -->
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section><!-- /Skills Section -->
-
-  <!-- Interests Section -->
-  <section id="about" class="interests section">
-
-    <!-- Section Title -->
-    <div id="interests" class="container section-title" data-aos="fade-up">
-      <h2>Features</h2>
-      <div><span>I'm</span> <span class="description-title">interested in</span></div>
-    </div><!-- End Section Title -->
-
-    <div class="container">
-
-      <div class="row gy-4">
-
-        <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="features-item">
-            <i class="bi bi-globe" style="color: #ffbb2c;"></i>
-            <h3><a href="#interests" class="stretched-link">Web Development</a></h3>
-          </div>
-        </div><!-- End Feature Item -->
-
-        <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="features-item">
-            <i class="bi bi-robot" style="color: #5578ff;"></i>
-            <h3><a href="#interests" class="stretched-link">Artificial Inteligence</a></h3>
-          </div>
-        </div><!-- End Feature Item -->
-
-        <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="features-item">
-            <i class="bi bi-cpu" style="color: #e80368;"></i>
-            <h3><a href="#interests" class="stretched-link">Machine Learning</a></h3>
-          </div>
-        </div><!-- End Feature Item -->
-
-        <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="features-item">
-            <i class="bi bi-android" style="color: #29cc61;"></i>
-            <h3><a href="#interests" class="stretched-link">Android</a></h3>
-          </div>
-        </div><!-- End Feature Item -->
-
-        <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="500">
-          <div class="features-item">
-            <i class="bi bi-image" style="color: #11dbcf;"></i>
-            <h3><a href="#interests" class="stretched-link">Digital Media</a></h3>
-          </div>
-        </div><!-- End Feature Item -->
-
-        <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="600">
-          <div class="features-item">
-            <i class="bi bi-camera-video" style="color: #4233ff;"></i>
-            <h3><a href="#interests" class="stretched-link">Cinematography</a></h3>
-          </div>
-        </div><!-- End Feature Item -->
-
-        <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="700">
-          <div class="features-item">
-            <i class="bi bi-command" style="color: #b2904f;"></i>
-            <h3><a href="#interests" class="stretched-link">Drones</a></h3>
-          </div>
-        </div><!-- End Feature Item -->
-
-        <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="800">
-          <div class="features-item">
-            <i class="bi bi-camera" style="color: #b20969;"></i>
-            <h3><a href="#interests" class="stretched-link">Photography</a></h3>
-          </div>
-        </div><!-- End Feature Item -->
-
-        <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="900">
-          <div class="features-item">
-            <i class="bi bi-activity" style="color: #ff5828;"></i>
-            <h3><a href="#interests" class="stretched-link">Social Media Trends</a></h3>
-          </div>
-        </div><!-- End Feature Item -->
-
-        <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1000">
-          <div class="features-item">
-            <i class="bi bi-music-note-list" style="color: #298a11;"></i>
-            <h3><a href="#interests" class="stretched-link">Music</a></h3>
-          </div>
-        </div><!-- End Feature Item -->
-
-        <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1100">
-          <div class="features-item">
-            <i class="bi bi-trophy" style="color: #47aeff;"></i>
-            <h3><a href="#interests" class="stretched-link">Cricket</a></h3>
-          </div>
-        </div><!-- End Feature Item -->
-
-        <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1200">
-          <div class="features-item">
-            <i class="bi bi-radioactive" style="color: #ffa76e;"></i>
-            <h3><a href="#interests" class="stretched-link">Football</a></h3>
-          </div>
-        </div><!-- End Feature Item -->
-
-      </div>
-
-
-    </div>
-
-  </section><!-- /Interests Section -->
-
-  <!-- Resume Section -->
-  <section id="resume" class="resume section">
-
-    <div class="container">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        <div><span>Check my</span> <span class="description-title">Resume</span></div>
-      </div><!-- End Section Title -->
-      <div class="row">
-
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-
-          <h3 class="resume-title">Education</h3>
-          <div class="resume-item">
-            <h4>Prince of Wales' College, Moratuwa</h4> <!-- Changed from h3 to h4 -->
-            <h5>2012 - 2025</h5>
-            <p><em>Primary and Secondary Education</em></p>
-            <ul>
-              <li>OL : 7As & 2Bs</li>
-              <li>AL : Physical Science + ICT</li>
-            </ul>
-          </div><!-- End Resume Item -->
-
-
-
-
-          <h3 class="resume-title">Achievements</h3>
-
-          <div class="resume-item">
-            <h4>Certified Web Developer</h4>
-            <h5>2023 - 2024</h5>
-            <p><em>University of Moratuwa</em></p>
-            <p>Courses are developed by the Departments of Computer Science and Engineering and Information Technology
-              of the University of Moratuwa in collaboration with Industry professionals.
+          <div class="col-lg-8 content">
+            <h2>Web Developer, Cinematographer, Musical Artist &amp; Journalist.</h2>
+            <p class="fst-italic py-3">
+              Nelitha Priyawansha is a talented web developer, content creator, and aspiring AI enthusiast from Sri
+              Lanka,
+              known for his impactful projects and contributions to the digital world.
             </p>
-          </div><!-- Edn Resume Item -->
-
-          <div class="resume-item pb-0">
-            <h4>Young Computer Scientist - National Level ICT Competition 2022</h4>
-            <p><em>Young Computer Scientist - National Level ICT Competition 2022 Awards Ceremony was held on 2nd
-                December 2022 at Ministry of Education with the distinguished presence of the Hon. Minister of
-                Education.</em>
-            </p>
-
-          </div><!-- Edn Resume Item -->
-
-
-
-        </div>
-
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-          <h3 class="resume-title">Professional Experience</h3>
-
-          <div class="resume-item">
-            <h4>Co-Chief Editor</h4>
-            <h5>2020 - Present</h5>
-            <p><em>Android Wedakarayo (Pvt)Ltd.</em></p>
-            <ul>
-              <li>Managed and edited content for AndroidWedakarayo.com, covering topics such as Android development and
-                mobile technology.</li>
-              <li>Collaborated with a team of web developers to improve the website’s functionality and user experience.
-              </li>
-              <li>Created innovative, user-focused web designs for the platform, improving engagement and accessibility.
-              </li>
-            </ul>
-          </div><!-- End Resume Item -->
-
-          <div class="resume-item">
-            <h4>Web Developer</h4>
-            <h5>2024 - Present</h5>
-            <p><em>Prince of Wales' College, Moratuwa, Sri Lanka</em></p>
-            <ul>
-              <li>Developed and managed multiple impactful web projects, including the award-winning website for Prince
-                of Wales College Moratuwa.</li>
-            </ul>
-          </div><!-- End Resume Item -->
-
-          <div class="resume-item">
-            <h4>Cinematographer</h4>
-            <h5>2021 - 2025</h5>
-            <p><em>Cambrians Media & Broadcasting Unit</em></p>
-            <ul>
-              <li>Involved in cinematography, creating music videos, cinematic vlogs, and event aftermovies showcased on
-                YouTube.</li>
-              <li>Collaborated with the Cambrians Media Unit, producing high-quality video content for school events and
-                projects.</li>
-            </ul>
-          </div><!-- End Resume Item -->
-
-
-
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section><!-- /Resume Section -->
-
-
-  <!-- Services Section -->
-  <section id="services" class="services section">
-
-    <div class="container">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <div><span>My</span> <span class="description-title">Services</span></div>
-      </div><!-- End Section Title -->
-      <div class="row gy-4">
-
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-item position-relative">
-            <div class="icon">
-              <i class="bi bi-laptop"></i>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>13 May 2006</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+94775536129</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Panadura, Sri Lanka</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Student</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
+                    <span>nelithaonline2006@gmail.com</span>
+                  </li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                </ul>
+              </div>
             </div>
-            <a href="#services" class="stretched-link">
-              <h3>Web Development</h3>
-            </a>
-            <p>Design and develop responsive, user-friendly websites optimized for speed, performance, and a seamless
-              user experience.</p>
-          </div>
-        </div><!-- End Service Item -->
-
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-          <div class="service-item position-relative">
-            <div class="icon">
-              <i class="bi bi-palette"></i>
-            </div>
-            <a href="#services" class="stretched-link">
-              <h3>UI/UX Designing</h3>
-            </a>
-            <p>Create visually appealing and intuitive user interfaces to enhance user satisfaction and engagement with
-              digital products.</p>
-          </div>
-        </div><!-- End Service Item -->
-
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-item position-relative">
-            <div class="icon">
-              <i class="bi bi-camera-video"></i>
-            </div>
-            <a href="#services" class="stretched-link">
-              <h3>Videography</h3>
-            </a>
-            <p>Capture cinematic visuals and craft storytelling experiences for events, vlogs, and promotional content.
+            <p class="py-3">
+              Nelitha Priyawansha is a passionate web developer and content creator, known for his work on various
+              impactful projects. He developed the award-winning website for Prince of Wales College Moratuwa, which
+              earned a Silver Award at BestWeb.LK 2024. As an editor for AndroidWedakarayo.com, he collaborates with
+              professionals to deliver quality content. Additionally, Nelitha has worked on several creative projects,
+              including cinematographic vlogs and event aftermovies, showcasing his diverse skills and contributions to
+              both the tech and creative fields.
             </p>
           </div>
-        </div><!-- End Service Item -->
-
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-item position-relative">
-            <div class="icon">
-              <i class="bi bi-scissors"></i>
-            </div>
-            <a href="#services" class="stretched-link">
-              <h3>Video Editing</h3>
-            </a>
-            <p>Transform raw footage into compelling videos with seamless transitions, effects, and professional-grade
-              editing.</p>
-          </div>
-        </div><!-- End Service Item -->
-
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-          <div class="service-item position-relative">
-            <div class="icon">
-              <i class="bi bi-music-note-list"></i>
-            </div>
-            <a href="#services" class="stretched-link">
-              <h3>Music Distribution</h3>
-            </a>
-            <p>Distribute your music to popular streaming platforms, reaching global audiences efficiently and
-              effectively.</p>
-          </div>
-        </div><!-- End Service Item -->
-
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-          <div class="service-item position-relative">
-            <div class="icon">
-              <i class="bi bi-people"></i>
-            </div>
-            <a href="#services" class="stretched-link">
-              <h3>Social Media Management</h3>
-            </a>
-            <p>Grow your online presence by creating engaging content and managing social media platforms strategically.
-            </p>
-          </div>
-        </div><!-- End Service Item -->
-
-
-
-
-      </div>
-
-    </div>
-
-  </section><!-- /Services Section -->
-
-
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="portfolio section">
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Portfolio</h2>
-      <div><span>Featured</span> <span class="description-title">Projects</span></div>
-    </div><!-- End Section Title -->
-    <div class="container">
-
-      <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-        <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-          <li data-filter="*" class="filter-active">All</li>
-          <li data-filter=".filter-web">Web</li>
-          <li data-filter=".filter-cinematography">Cinematography</li>
-          <li data-filter=".filter-journalism">Journalism</li>
-        </ul><!-- End Portfolio Filters -->
-
-        <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
-            <div class="portfolio-content h-100">
-              <img src="assets/img/portfolio/pwc.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Prince of Wales' College, Moratuwa</h4>
-                <p>princeofwales.edu.lk</p>
-                <a href="assets/img/portfolio/pwc.webp" title="Prince of Wales' College, Moratuwa"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://princeofwales.edu.lk/" target="_blank" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cinematography">
-            <div class="portfolio-content h-100">
-              <img src="assets/img/portfolio/sadbhashana-aftermovie.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Sadbhashana '24 | AfterMovie</h4>
-                <p>Cinematography & Video Editing</p>
-                <a href="assets/img/portfolio/sadbhashana-aftermovie.webp" title="Sadbhashana '24 | AfterMovie"
-                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="https://www.youtube.com/watch?v=qTvzDsIr1IU&list=PLUvJBkz9yl1i5aRg7jPWV5G994sC4GQZl&index=1&pp=gAQBiAQB"
-                  target="_blank" title="Watch on YouTube" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cinematography">
-            <div class="portfolio-content h-100">
-              <img src="assets/img/portfolio/foundersday-song.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Music Video: Founders' Day Theme Song</h4>
-                <p>Cinematography & Video Editing</p>
-                <a href="assets/img/portfolio/foundersday-song.webp" title="Music Video: Founders' Day Theme Song"
-                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="https://www.youtube.com/watch?v=tPPrjlLgPHk&list=PLUvJBkz9yl1i5aRg7jPWV5G994sC4GQZl&index=10&pp=gAQBiAQB"
-                  target="_blank" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cinematography">
-            <div class="portfolio-content h-100">
-              <img src="assets/img/portfolio/hetath-adarei-song.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Music Video: Teachers' Day Theme Song</h4>
-                <p>Cinematography</p>
-                <a href="assets/img/portfolio/hetath-adarei-song.webp" title="Music Video: Founders' Day Theme Song"
-                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="https://youtube.com/watch?v=SmCX902CvHI" target="_blank" title="More Details"
-                  class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
-            <div class="portfolio-content h-100">
-              <img src="assets/img/portfolio/techrolk.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>TechRoLK Engineering Solutions</h4>
-                <p>Landing Page built with Laravel and ECommerce Website using WordPress</p>
-                <a href="assets/img/portfolio/techrolk.webp" title="TechRoLK Engineering Solutions"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://techrolk.com" target="_blank" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-
-
-
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-journalism">
-            <div class="portfolio-content h-100">
-              <img src="assets/img/portfolio/androidwedakarayo.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Androidwedakarayo.com</h4>
-                <p>Co Chief Editor Androidwedakarayo.com</p>
-                <a href="assets/img/portfolio/androidwedakarayo.webp" title="Androidwedakarayo.com"
-                  data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://androidwedakarayo.com/author/nelitha/" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-
-
-
-          <!-- Sadbhashana '24 - Teaser Trailer | CMBU -->
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cinematography">
-            <div class="portfolio-content h-100">
-              <img src="assets/img/portfolio/sadbhashana-trailer.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Sadbhashana '24 - Teaser Trailer | CMBU</h4>
-                <p>Cinematography & Video Editing</p>
-                <a href="assets/img/portfolio/sadbhashana-trailer.webp" title="Sadbhashana '24 - Teaser Trailer | CMBU"
-                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="https://www.youtube.com/watch?v=X1EuMTOMy44&list=PLUvJBkz9yl1i5aRg7jPWV5G994sC4GQZl&index=5&pp=gAQBiAQB"
-                  target="_blank" title="Watch on YouTube" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <!-- Wales' Vesak Udanaya '24 | Aftermovie -->
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cinematography">
-            <div class="portfolio-content h-100">
-              <img src="assets/img/portfolio/vesak-udanaya.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Wales' Vesak Udanaya '24 | Aftermovie</h4>
-                <p>Cinematography & Video Editing</p>
-                <a href="assets/img/portfolio/vesak-udanaya.webp" title="Wales' Vesak Udanaya '24 | Aftermovie"
-                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="https://www.youtube.com/watch?v=xM3weQo47sU&list=PLUvJBkz9yl1i5aRg7jPWV5G994sC4GQZl&index=11&pp=gAQBiAQB"
-                  target="_blank" title="Watch on YouTube" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <!-- Athletic Meet 2024 | Aftermovie -->
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cinematography">
-            <div class="portfolio-content h-100">
-              <img src="assets/img/portfolio/athletic-meet.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Athletic Meet 2024 | Aftermovie</h4>
-                <p>Cinematography & Video Editing</p>
-                <a href="assets/img/portfolio/athletic-meet.webp" title="Athletic Meet 2024 | Aftermovie"
-                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="https://www.youtube.com/watch?v=Xst5RGS7FCU&list=PLUvJBkz9yl1i5aRg7jPWV5G994sC4GQZl&index=12&t=1s&pp=gAQBiAQB"
-                  target="_blank" title="Watch on YouTube" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
         </div>
 
-
       </div>
 
-    </div>
+    </section><!-- /About Section -->
 
-    <br><br><br><br><br>
-    <style>
-      .song-card img {
-        transition: transform 0.3s ease-in-out;
-        border-radius: 10px;
-      }
+    <!-- Stats Section -->
+    <section id="about" class="stats section">
 
-      .song-card img:hover {
-        transform: scale(1.05);
-      }
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-      .song-card {
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        background-color: #2c2c2c;
-      }
-
-      .song-card .card-body {
-        color: #fff;
-      }
-
-
-      .section-title h2 {
-        color: #fff;
-      }
-
-      .description-title {
-        color: #f1f1f1;
-      }
-    </style>
-
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Portfolio</h2>
-      <div><span>Original</span> <span class="description-title">Music</span></div>
-
-      <div class="container my-5">
         <div class="row gy-4">
 
-          <!-- Card 1 -->
-          <div class="col-lg-4 col-md-6">
-            <div class="card song-card h-100">
-              <img src="assets/img/portfolio/music/eternal.webp" class="card-img-top" alt="Song Cover">
-              <div class="card-body text-center">
-                <p class="card-title">Eternal Echoes</p>
-                <a href="https://open.spotify.com/album/1JLhaznxYSJj79KDIzr8Tb" target="_blank"
-                  class="btn btn-primary btn-sm">Play Now</a>
-              </div>
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-emoji-smile"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="80" data-purecounter-duration="1"
+                data-purecounter-suffix="+" class="purecounter"></span>
+              <p>Happy Clients</p>
             </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-journal-richtext"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="104" data-purecounter-duration="1"
+                data-purecounter-suffix="+" class="purecounter"></span>
+              <p>Projects</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-headset"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="953" data-purecounter-duration="1"
+                data-purecounter-suffix="+" class="purecounter"></span>
+              <p>Hours Of Support</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-people"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1"
+                data-purecounter-suffix="+" class="purecounter"></span>
+              <p>Hard Workers</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Skills Section -->
+    <section id="about" class="skills section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+        <div><span>My</span> <span class="description-title">Skills</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row skills-content skills-animation">
+
+          <div class="col-lg-6">
+            <div class="progress">
+              <span class="skill" id="html-skill"><span>HTML</span> <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
+                  aria-labelledby="html-skill">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill" id="css-skill"><span>CSS</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+                  aria-labelledby="css-skill">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill" id="javascript-skill"><span>JavaScript</span> <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                  aria-labelledby="javascript-skill">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill" id="php-skill"><span>PHP</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                  aria-labelledby="php-skill">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill" id="python-skill"><span>Python</span> <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                  aria-labelledby="python-skill">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
           </div>
 
-          <!-- Card 2 -->
-          <div class="col-lg-4 col-md-6">
-            <div class="card song-card h-100">
-              <img src="assets/img/portfolio/music/quantum.webp" class="card-img-top" alt="Song Cover">
-              <div class="card-body text-center">
-                <p class="card-title">Quantum Sonic Odyssey</p>
-                <a href="https://open.spotify.com/album/0apK7pZQV8Mm01k7kqG7pN" target="_blank"
-                  class="btn btn-primary btn-sm">Play Now</a>
+          <div class="col-lg-6">
+            <div class="progress">
+              <span class="skill" id="laravel-skill"><span>Laravel/Web Framework</span> <i class="val">50%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                  aria-labelledby="laravel-skill">
+                </div>
               </div>
-            </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill" id="wordpress-skill"><span>WordPress/CMS</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+                  aria-labelledby="wordpress-skill">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill" id="ghost-skill"><span>Ghost/CMS</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                  aria-labelledby="ghost-skill">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill" id="premiere-skill"><span>Premier Pro</span> <i class="val">65%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
+                  aria-labelledby="premiere-skill">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill" id="photoshop-skill"><span>Photoshop</span> <i class="val">55%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"
+                  aria-labelledby="photoshop-skill">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
           </div>
 
-          <!-- Card 3 -->
-          <div class="col-lg-4 col-md-6">
-            <div class="card song-card h-100">
-              <img src="assets/img/portfolio/music/one-day.webp" class="card-img-top" alt="Song Cover">
-              <div class="card-body text-center">
-                <p class="card-title">It Takes One Day</p>
-                <a href="https://open.spotify.com/album/0gYgM98FCFMLYQnxvacsWx" target="_blank"
-                  class="btn btn-primary btn-sm">Play Now</a>
-              </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Skills Section -->
+
+    <!-- Interests Section -->
+    <section id="about" class="interests section">
+
+      <!-- Section Title -->
+      <div id="interests" class="container section-title" data-aos="fade-up">
+        <h2>Features</h2>
+        <div><span>I'm</span> <span class="description-title">interested in</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="features-item">
+              <i class="bi bi-globe" style="color: #ffbb2c;"></i>
+              <h3><a href="#interests" class="stretched-link">Web Development</a></h3>
             </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="features-item">
+              <i class="bi bi-robot" style="color: #5578ff;"></i>
+              <h3><a href="#interests" class="stretched-link">Artificial Inteligence</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="features-item">
+              <i class="bi bi-cpu" style="color: #e80368;"></i>
+              <h3><a href="#interests" class="stretched-link">Machine Learning</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="features-item">
+              <i class="bi bi-android" style="color: #29cc61;"></i>
+              <h3><a href="#interests" class="stretched-link">Android</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="features-item">
+              <i class="bi bi-image" style="color: #11dbcf;"></i>
+              <h3><a href="#interests" class="stretched-link">Digital Media</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="features-item">
+              <i class="bi bi-camera-video" style="color: #4233ff;"></i>
+              <h3><a href="#interests" class="stretched-link">Cinematography</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="700">
+            <div class="features-item">
+              <i class="bi bi-command" style="color: #b2904f;"></i>
+              <h3><a href="#interests" class="stretched-link">Drones</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="800">
+            <div class="features-item">
+              <i class="bi bi-camera" style="color: #b20969;"></i>
+              <h3><a href="#interests" class="stretched-link">Photography</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="900">
+            <div class="features-item">
+              <i class="bi bi-activity" style="color: #ff5828;"></i>
+              <h3><a href="#interests" class="stretched-link">Social Media Trends</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1000">
+            <div class="features-item">
+              <i class="bi bi-music-note-list" style="color: #298a11;"></i>
+              <h3><a href="#interests" class="stretched-link">Music</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1100">
+            <div class="features-item">
+              <i class="bi bi-trophy" style="color: #47aeff;"></i>
+              <h3><a href="#interests" class="stretched-link">Cricket</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1200">
+            <div class="features-item">
+              <i class="bi bi-radioactive" style="color: #ffa76e;"></i>
+              <h3><a href="#interests" class="stretched-link">Football</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+        </div>
+
+
+      </div>
+
+    </section><!-- /Interests Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <div class="container">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Resume</h2>
+          <div><span>Check my</span> <span class="description-title">Resume</span></div>
+        </div><!-- End Section Title -->
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Prince of Wales' College, Moratuwa</h4> <!-- Changed from h3 to h4 -->
+              <h5>2012 - 2025</h5>
+              <p><em>Primary and Secondary Education</em></p>
+              <ul>
+                <li>OL : 7As & 2Bs</li>
+                <li>AL : Physical Science + ICT</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+
+
+
+            <h3 class="resume-title">Achievements</h3>
+
+            <div class="resume-item">
+              <h4>Certified Web Developer</h4>
+              <h5>2023 - 2024</h5>
+              <p><em>University of Moratuwa</em></p>
+              <p>Courses are developed by the Departments of Computer Science and Engineering and Information Technology
+                of the University of Moratuwa in collaboration with Industry professionals.
+              </p>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item pb-0">
+              <h4>Young Computer Scientist - National Level ICT Competition 2022</h4>
+              <p><em>Young Computer Scientist - National Level ICT Competition 2022 Awards Ceremony was held on 2nd
+                  December 2022 at Ministry of Education with the distinguished presence of the Hon. Minister of
+                  Education.</em>
+              </p>
+
+            </div><!-- Edn Resume Item -->
+
+
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Professional Experience</h3>
+
+            <div class="resume-item">
+              <h4>Co-Chief Editor</h4>
+              <h5>2020 - Present</h5>
+              <p><em>Android Wedakarayo (Pvt)Ltd.</em></p>
+              <ul>
+                <li>Managed and edited content for AndroidWedakarayo.com, covering topics such as Android development
+                  and
+                  mobile technology.</li>
+                <li>Collaborated with a team of web developers to improve the website’s functionality and user
+                  experience.
+                </li>
+                <li>Created innovative, user-focused web designs for the platform, improving engagement and
+                  accessibility.
+                </li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item">
+              <h4>Web Developer</h4>
+              <h5>2024 - Present</h5>
+              <p><em>Prince of Wales' College, Moratuwa, Sri Lanka</em></p>
+              <ul>
+                <li>Developed and managed multiple impactful web projects, including the award-winning website for
+                  Prince
+                  of Wales College Moratuwa.</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item">
+              <h4>Cinematographer</h4>
+              <h5>2021 - 2025</h5>
+              <p><em>Cambrians Media & Broadcasting Unit</em></p>
+              <ul>
+                <li>Involved in cinematography, creating music videos, cinematic vlogs, and event aftermovies showcased
+                  on
+                  YouTube.</li>
+                <li>Collaborated with the Cambrians Media Unit, producing high-quality video content for school events
+                  and
+                  projects.</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+
+
+
           </div>
 
         </div>
+
       </div>
 
-
-  </section><!-- /Portfolio Section -->
-
+    </section><!-- /Resume Section -->
 
 
+    <!-- Services Section -->
+    <section id="services" class="services section">
 
+      <div class="container">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Services</h2>
+          <div><span>My</span> <span class="description-title">Services</span></div>
+        </div><!-- End Section Title -->
+        <div class="row gy-4">
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact section">
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Contact</h2>
-      <div><span></span> <span class="description-title">Contact Me</span></div>
-    </div><!-- End Section Title -->
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-      <div class="row gy-4">
-
-        <div class="col-md-6">
-          <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
-            <i class="icon bi bi-geo-alt flex-shrink-0"></i>
-            <div>
-              <h3>Address</h3>
-              <p>No.64, Wedamawatha, Gorakana, Keselwaththa, Panadura, Sri Lanka</p>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-laptop"></i>
+              </div>
+              <a href="#services" class="stretched-link">
+                <h3>Web Development</h3>
+              </a>
+              <p>Design and develop responsive, user-friendly websites optimized for speed, performance, and a seamless
+                user experience.</p>
             </div>
-          </div>
-        </div><!-- End Info Item -->
+          </div><!-- End Service Item -->
 
-        <div class="col-md-6">
-          <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
-            <i class="icon bi bi-telephone flex-shrink-0"></i>
-            <div>
-              <h3>Call</h3>
-              <p>+94 77 553 6129</p>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-palette"></i>
+              </div>
+              <a href="#services" class="stretched-link">
+                <h3>UI/UX Designing</h3>
+              </a>
+              <p>Create visually appealing and intuitive user interfaces to enhance user satisfaction and engagement
+                with
+                digital products.</p>
             </div>
-          </div>
-        </div><!-- End Info Item -->
+          </div><!-- End Service Item -->
 
-        <div class="col-md-6">
-          <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
-            <i class="icon bi bi-envelope flex-shrink-0"></i>
-            <div>
-              <h3>Email</h3>
-              <p>nelithaonline2006@gmail.com</p>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-camera-video"></i>
+              </div>
+              <a href="#services" class="stretched-link">
+                <h3>Videography</h3>
+              </a>
+              <p>Capture cinematic visuals and craft storytelling experiences for events, vlogs, and promotional
+                content.
+              </p>
             </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-scissors"></i>
+              </div>
+              <a href="#services" class="stretched-link">
+                <h3>Video Editing</h3>
+              </a>
+              <p>Transform raw footage into compelling videos with seamless transitions, effects, and professional-grade
+                editing.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-music-note-list"></i>
+              </div>
+              <a href="#services" class="stretched-link">
+                <h3>Music Distribution</h3>
+              </a>
+              <p>Distribute your music to popular streaming platforms, reaching global audiences efficiently and
+                effectively.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <a href="#services" class="stretched-link">
+                <h3>Social Media Management</h3>
+              </a>
+              <p>Grow your online presence by creating engaging content and managing social media platforms
+                strategically.
+              </p>
+            </div>
+          </div><!-- End Service Item -->
+
+
+
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <div><span>Featured</span> <span class="description-title">Projects</span></div>
+      </div><!-- End Section Title -->
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-web">Web</li>
+            <li data-filter=".filter-cinematography">Cinematography</li>
+            <li data-filter=".filter-journalism">Journalism</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/pwc.webp" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Prince of Wales' College, Moratuwa</h4>
+                  <p>princeofwales.edu.lk</p>
+                  <a href="assets/img/portfolio/pwc.webp" title="Prince of Wales' College, Moratuwa"
+                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="https://princeofwales.edu.lk/" target="_blank" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cinematography">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/sadbhashana-aftermovie.webp" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Sadbhashana '24 | AfterMovie</h4>
+                  <p>Cinematography & Video Editing</p>
+                  <a href="assets/img/portfolio/sadbhashana-aftermovie.webp" title="Sadbhashana '24 | AfterMovie"
+                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="https://www.youtube.com/watch?v=qTvzDsIr1IU&list=PLUvJBkz9yl1i5aRg7jPWV5G994sC4GQZl&index=1&pp=gAQBiAQB"
+                    target="_blank" title="Watch on YouTube" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cinematography">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/foundersday-song.webp" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Music Video: Founders' Day Theme Song</h4>
+                  <p>Cinematography & Video Editing</p>
+                  <a href="assets/img/portfolio/foundersday-song.webp" title="Music Video: Founders' Day Theme Song"
+                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="https://www.youtube.com/watch?v=tPPrjlLgPHk&list=PLUvJBkz9yl1i5aRg7jPWV5G994sC4GQZl&index=10&pp=gAQBiAQB"
+                    target="_blank" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cinematography">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/hetath-adarei-song.webp" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Music Video: Teachers' Day Theme Song</h4>
+                  <p>Cinematography</p>
+                  <a href="assets/img/portfolio/hetath-adarei-song.webp" title="Music Video: Founders' Day Theme Song"
+                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="https://youtube.com/watch?v=SmCX902CvHI" target="_blank" title="More Details"
+                    class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+
+
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/techrolk.webp" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>TechRoLK Engineering Solutions</h4>
+                  <p>Landing Page built with Laravel and ECommerce Website using WordPress</p>
+                  <a href="assets/img/portfolio/techrolk.webp" title="TechRoLK Engineering Solutions"
+                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="https://techrolk.com" target="_blank" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+
+
+
+
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-journalism">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/androidwedakarayo.webp" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Androidwedakarayo.com</h4>
+                  <p>Co Chief Editor Androidwedakarayo.com</p>
+                  <a href="assets/img/portfolio/androidwedakarayo.webp" title="Androidwedakarayo.com"
+                    data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="https://androidwedakarayo.com/author/nelitha/" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+
+
+
+            <!-- Sadbhashana '24 - Teaser Trailer | CMBU -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cinematography">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/sadbhashana-trailer.webp" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Sadbhashana '24 - Teaser Trailer | CMBU</h4>
+                  <p>Cinematography & Video Editing</p>
+                  <a href="assets/img/portfolio/sadbhashana-trailer.webp"
+                    title="Sadbhashana '24 - Teaser Trailer | CMBU" data-gallery="portfolio-gallery-product"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://www.youtube.com/watch?v=X1EuMTOMy44&list=PLUvJBkz9yl1i5aRg7jPWV5G994sC4GQZl&index=5&pp=gAQBiAQB"
+                    target="_blank" title="Watch on YouTube" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <!-- Wales' Vesak Udanaya '24 | Aftermovie -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cinematography">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/vesak-udanaya.webp" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Wales' Vesak Udanaya '24 | Aftermovie</h4>
+                  <p>Cinematography & Video Editing</p>
+                  <a href="assets/img/portfolio/vesak-udanaya.webp" title="Wales' Vesak Udanaya '24 | Aftermovie"
+                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="https://www.youtube.com/watch?v=xM3weQo47sU&list=PLUvJBkz9yl1i5aRg7jPWV5G994sC4GQZl&index=11&pp=gAQBiAQB"
+                    target="_blank" title="Watch on YouTube" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <!-- Athletic Meet 2024 | Aftermovie -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cinematography">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/athletic-meet.webp" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Athletic Meet 2024 | Aftermovie</h4>
+                  <p>Cinematography & Video Editing</p>
+                  <a href="assets/img/portfolio/athletic-meet.webp" title="Athletic Meet 2024 | Aftermovie"
+                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="https://www.youtube.com/watch?v=Xst5RGS7FCU&list=PLUvJBkz9yl1i5aRg7jPWV5G994sC4GQZl&index=12&t=1s&pp=gAQBiAQB"
+                    target="_blank" title="Watch on YouTube" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
           </div>
-        </div><!-- End Info Item -->
 
-        <div class="col-md-6">
-          <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="500">
-            <i class="icon bi bi-share flex-shrink-0"></i>
-            <div>
-              <h3>Social Profiles</h3>
-              <div class="social-links">
-                <a href="https://www.facebook.com/nelitha.13" target="_blank" aria-label="Visit my Facebook profile">
-                  <i class="bi bi-facebook"></i>
-                </a>
-                <a href="https://www.instagram.com/nelitha.13" target="_blank" aria-label="Visit my Instagram profile">
-                  <i class="bi bi-instagram"></i>
-                </a>
-                <a href="https://www.youtube.com/@NelithaPriyawansha" target="_blank"
-                  aria-label="Visit my YouTube channel">
-                  <i class="bi bi-youtube"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/nelitha13/" target="_blank" aria-label="Visit my LinkedIn profile">
-                  <i class="bi bi-linkedin"></i>
-                </a>
 
+        </div>
+
+      </div>
+
+     
+
+      <!-- <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <div><span>Original</span> <span class="description-title">Music</span></div>
+
+        <div class="container my-3">
+          <iframe style="border-radius:12px"
+            src="https://open.spotify.com/embed/artist/6K0gI5T1iOWkv3OnKzHLn2?utm_source=generator&theme=0" width="100%"
+            height="352" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div> -->
+
+    </section>
+    <!-- /Portfolio Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <div><span></span> <span class="description-title">Contact Me</span></div>
+      </div><!-- End Section Title -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-md-6">
+            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
+              <i class="icon bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Address</h3>
+                <p>No.64, Wedamawatha, Gorakana, Keselwaththa, Panadura, Sri Lanka</p>
               </div>
             </div>
-          </div>
-        </div><!-- End Info Item -->
+          </div><!-- End Info Item -->
 
-      </div>
+          <div class="col-md-6">
+            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
+              <i class="icon bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Call</h3>
+                <p>+94 77 553 6129</p>
+              </div>
+            </div>
+          </div><!-- End Info Item -->
 
-      <!-- <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
+          <div class="col-md-6">
+            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
+              <i class="icon bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email</h3>
+                <p>nelithaonline2006@gmail.com</p>
+              </div>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-md-6">
+            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="500">
+              <i class="icon bi bi-share flex-shrink-0"></i>
+              <div>
+                <h3>Social Profiles</h3>
+                <div class="social-links">
+                  <a href="https://www.facebook.com/nelitha.13" target="_blank" aria-label="Visit my Facebook profile">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                  <a href="https://www.instagram.com/nelitha.13" target="_blank"
+                    aria-label="Visit my Instagram profile">
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                  <a href="https://www.youtube.com/@NelithaPriyawansha" target="_blank"
+                    aria-label="Visit my YouTube channel">
+                    <i class="bi bi-youtube"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/nelitha13/" target="_blank"
+                    aria-label="Visit my LinkedIn profile">
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+
+                </div>
+              </div>
+            </div>
+          </div><!-- End Info Item -->
+
+        </div>
+
+        <!-- <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
         <div class="row gy-4">
 
           <div class="col-md-6">
@@ -1100,109 +1162,109 @@
         </div>
       </form> -->
 
-    </div>
-
-  </section><!-- /Contact Section -->
-
-  <footer id="footer" class="footer dark-background">
-    <div class="container">
-      <!-- <h3 class="sitename">Nelitha Vindinu Priyawansha</h3> -->
-      <img src="assets/img/logo-main.png" width="200px" alt="">
-      <br><br>
-      <p>Web Developer | Cinematographer | Artist | Journalist</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://www.facebook.com/nelitha.13" target="_blank" aria-label="Visit my Facebook profile">
-          <i class="bi bi-facebook"></i>
-        </a>
-        <a href="https://www.instagram.com/nelitha.13" target="_blank" aria-label="Visit my Instagram profile">
-          <i class="bi bi-instagram"></i>
-        </a>
-        <a href="https://www.youtube.com/@NelithaPriyawansha" target="_blank" aria-label="Visit my YouTube channel">
-          <i class="bi bi-youtube"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/nelitha13/" target="_blank" aria-label="Visit my LinkedIn profile">
-          <i class="bi bi-linkedin"></i>
-        </a>
-
       </div>
+
+    </section><!-- /Contact Section -->
+
+    <footer id="footer" class="footer dark-background">
       <div class="container">
-        <div class="copyright">
-          <span>&copy; <span id="current-year"></span></span><strong class="px-1 sitename">Nelitha Vindinu
-            Priyawansha.</strong> <span>All Rights Reserved.</span>
-
-          <script>
-            // Get the current year
-            const currentYear = new Date().getFullYear();
-
-            // Set the year dynamically
-            document.getElementById('current-year').textContent = currentYear;
-          </script>
+        <!-- <h3 class="sitename">Nelitha Vindinu Priyawansha</h3> -->
+        <img src="assets/img/logo-main.png" width="200px" alt="">
+        <br><br>
+        <p>Web Developer | Cinematographer | Artist | Journalist</p>
+        <div class="social-links d-flex justify-content-center">
+          <a href="https://www.facebook.com/nelitha.13" target="_blank" aria-label="Visit my Facebook profile">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/nelitha.13" target="_blank" aria-label="Visit my Instagram profile">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/@NelithaPriyawansha" target="_blank" aria-label="Visit my YouTube channel">
+            <i class="bi bi-youtube"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/nelitha13/" target="_blank" aria-label="Visit my LinkedIn profile">
+            <i class="bi bi-linkedin"></i>
+          </a>
 
         </div>
-        <div class="credits">
+        <div class="container">
+          <div class="copyright">
+            <span>&copy; <span id="current-year"></span></span><strong class="px-1 sitename">Nelitha Vindinu
+              Priyawansha.</strong> <span>All Rights Reserved.</span>
 
+            <script>
+              // Get the current year
+              const currentYear = new Date().getFullYear();
+
+              // Set the year dynamically
+              document.getElementById('current-year').textContent = currentYear;
+            </script>
+
+          </div>
+          <div class="credits">
+
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-  <script>
-    // Get all the navigation links
-    const navLinks = document.querySelectorAll('nav a');
+    <!-- Preloader -->
+    <div id="preloader"></div>
+    <script>
+      // Get all the navigation links
+      const navLinks = document.querySelectorAll('nav a');
 
-    // Smooth scroll for navigation links
-    navLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        window.scrollTo({
-          top: targetSection.offsetTop - 50, // Adjust offset for the fixed nav
-          behavior: 'smooth'
+      // Smooth scroll for navigation links
+      navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute('href').substring(1);
+          const targetSection = document.getElementById(targetId);
+          window.scrollTo({
+            top: targetSection.offsetTop - 50, // Adjust offset for the fixed nav
+            behavior: 'smooth'
+          });
         });
       });
-    });
 
-    // Function to highlight active link while scrolling
-    window.addEventListener('scroll', () => {
-      let currentSection = '';
-      document.querySelectorAll('section').forEach(section => {
-        const sectionTop = section.offsetTop - 150; // Adjust according to the header size
-        if (pageYOffset >= sectionTop) {
-          currentSection = section.getAttribute('id');
-        }
+      // Function to highlight active link while scrolling
+      window.addEventListener('scroll', () => {
+        let currentSection = '';
+        document.querySelectorAll('section').forEach(section => {
+          const sectionTop = section.offsetTop - 150; // Adjust according to the header size
+          if (pageYOffset >= sectionTop) {
+            currentSection = section.getAttribute('id');
+          }
+        });
+
+        // Remove 'active' class from all links and add to the current section link
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href').substring(1) === currentSection) {
+            link.classList.add('active');
+          }
+        });
       });
+    </script>
 
-      // Remove 'active' class from all links and add to the current section link
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').substring(1) === currentSection) {
-          link.classList.add('active');
-        }
-      });
-    });
-  </script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+    <script src="assets/vendor/php-email-form/validate.js" defer></script>
+    <script src="assets/vendor/aos/aos.js" defer></script>
+    <script src="assets/vendor/typed.js/typed.umd.js" defer></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js" defer></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-  <script src="assets/vendor/php-email-form/validate.js" defer></script>
-  <script src="assets/vendor/aos/aos.js" defer></script>
-  <script src="assets/vendor/typed.js/typed.umd.js" defer></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js" defer></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js" defer></script>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js" defer></script>
 
 
 </body>
