@@ -32,10 +32,6 @@ Header set Content-Security-Policy "default-src 'self';"
   Deny from all
 </FilesMatch>
 
-# Custom error pages (optional)
-ErrorDocument 404 /404.html
-ErrorDocument 500 /500.html
-
 # Enable Gzip compression (for faster page loads)
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/x-javascript application/javascript
