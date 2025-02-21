@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /private/
 Allow: /
 
-Sitemap: https://nelitha13.github.io/sitemap.xml
+Sitemap: https://itsnelitha.github.io/sitemap.xml
