@@ -9,6 +9,16 @@ RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# Social Media Redirects
+RewriteRule ^facebook$ https://www.facebook.com/itsnelitha [R=301,L]
+RewriteRule ^twitter$ https://www.twitter.com/itsnelitha [R=301,L]
+RewriteRule ^instagram$ https://www.instagram.com/itsnelitha [R=301,L]
+RewriteRule ^youtube$ https://www.youtube.com/@itsnelitha [R=301,L]
+RewriteRule ^tiktok$ https://www.tiktok.com/@itsnelitha [R=301,L]
+RewriteRule ^linkedin$ https://www.linkedin.com/in/itsnelitha [R=301,L]
+RewriteRule ^github$ https://www.github.com/itsnelitha [R=301,L]
+RewriteRule ^telegram$ https://t.me/itsnelitha [R=301,L]
+
 # Set default document (index.html) for directories
 DirectoryIndex index.html
 
